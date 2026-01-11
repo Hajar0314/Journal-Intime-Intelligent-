@@ -222,13 +222,9 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
 - **Extend** : "Consulter les Statistiques" **étend** "Exporter en PDF" (optionnel)
 - **Généralisation** : "Modifier une Note" et "Créer une Note" héritent de "Gérer une Note"
 
-#### 3.1.4 Diagramme Visuel
 
-<!-- Placeholder pour le diagramme de cas d'utilisation -->
-![Diagramme de Cas d'Utilisation](./docs/images/use_case_diagram.png)
-*Figure 2 : Diagramme de cas d'utilisation montrant les interactions entre utilisateurs et système*
 
-### 3.2 Diagramme de Classes (Conception Détaillée)
+### 3.2 Diagramme de Classe
 
 Le diagramme de classes représente la structure statique de l'application et les relations entre les différentes entités du système. Cette modélisation suit les principes de la Programmation Orientée Objet et respecte les patterns de conception établis.
 
@@ -979,13 +975,10 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 **Titre** : Configuration et Personnalisation du Compte Utilisateur
 
 **Fonctionnalités détaillées** :
-- **Informations personnelles** : Affichage et modification du nom d'utilisateur et de l'email
-- **Changement de mot de passe** : Section sécurisée pour mettre à jour le mot de passe
-- **Avatar** : Bouton pour télécharger et modifier la photo de profil
+- **Informations personnelles** : Affichage et modification du nom d'utilisateur et de l'emaiL
 - **Préférences d'affichage** : ComboBox pour sélectionner le thème (Clair/Sombre)
 - **Préférences linguistiques** : ComboBox pour choisir la langue de l'interface (FR/EN)
-- **Choix de police** : ComboBox pour personnaliser la typographie de l'application
-- **Boutons d'action** : Sauvegarder les modifications, Annuler, Supprimer le compte
+- **Boutons d'action** : Sauvegarder les modifications
 
 ### 6.8 `notifications.fxml` - Centre de Notifications
 **Titre** : Gestion des Alertes et Rappels Système
@@ -993,8 +986,7 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 **Fonctionnalités détaillées** :
 - **Liste de notifications** : ListView affichant toutes les notifications par ordre chronologique inverse
 - **Indicateur de lecture** : Distinction visuelle entre notifications lues et non lues
-- **Actions** : Marquer comme lu, Supprimer
-- **Filtrage** : Option pour afficher uniquement les notifications non lues
+- **Actions** : Marquer comme lu
 - **Bouton retour** : Navigation vers le dashboard
 
 ### 6.9 `day_details.fxml` - Détails d'une Journée
@@ -1004,8 +996,6 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **En-tête de date** : Label affichant la date sélectionnée
 - **Liste des notes du jour** : Affichage de toutes les notes créées ce jour-là
 - **Résumé émotionnel** : Calcul et affichage du score moyen d'humeur de la journée
-- **Navigation** : Boutons pour passer au jour précédent/suivant
-- **Accès rapide** : Bouton pour créer une nouvelle note pour ce jour
 
 ### 6.10 `exercise.fxml` - Suggestions d'Exercices
 **Titre** : Recommandations de Bien-être Personnalisées
@@ -1014,7 +1004,6 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **Liste d'exercices** : Affichage des exercices suggérés basés sur l'analyse d'humeur
 - **Détails** : Titre, description, type (Respiration/Méditation/Journaling), durée
 - **Icônes** : Représentation visuelle du type d'exercice
-- **Bouton d'action** : Marquer comme "Complété" ou "À faire plus tard"
 
 ### 6.11 `auth.fxml` - Conteneur d'Authentification
 **Titre** : Wrapper pour les Écrans de Connexion/Inscription
@@ -1075,8 +1064,8 @@ Cette section détaille toutes les étapes nécessaires pour exécuter le projet
 
 #### Étape 1 : Clonage du Dépôt Git
 ```bash
-git clone https://github.com/votre-username/journal-intime.git
-cd journal-intime
+git clone 
+cd 
 ```
 **Explication** : Récupère le code source depuis le dépôt distant et navigue dans le répertoire du projet.
 
