@@ -3,7 +3,9 @@
 
 ---
 
-## 📋 PAGE DE GARDE
+<p align="center">
+  <img src="Images/Emsi-logo" alt="Logo Emsi" width="700"/>
+</p>
 
 **ÉCOLE MAROCAINE DES SCIENCES DE L'INGÉNIEUR (EMSI)**
 
