@@ -917,6 +917,9 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **Option "Remember Me"** : CheckBox permettant la sauvegarde sécurisée des identifiants pour les sessions futures
 - **Navigation** : Lien hypertexte vers l'interface d'inscription pour les nouveaux utilisateurs
 - **Accessibilité** : Support complet de la navigation au clavier (Tab, Enter)
+<p align="center">
+  <img src="Images/Login2.png" alt="Interface Login" width="700"/>
+</p>
 
 ### 6.2 `register.fxml` - Interface d'Inscription
 **Titre** : Création de Nouveau Compte Utilisateur
@@ -927,6 +930,10 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **Feedback visuel** : Indicateurs de force du mot de passe (faible/moyen/fort) avec code couleur
 - **Confirmation** : Vérification que les deux champs de mot de passe correspondent
 - **Retour à la connexion** : Lien pour revenir à l'écran de login si l'utilisateur possède déjà un compte
+
+  <p align="center">
+  <img src="Images/Register1.png" alt="Interface Register" width="700"/>
+</p>
 
 ### 6.3 `main_dashboard.fxml` - Tableau de Bord Principal
 **Titre** : Hub Central de Navigation et Gestion des Notes
@@ -940,7 +947,12 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **Badge de notifications** : Indicateur visuel du nombre de notifications non lues
 - **Paramètres rapides** : ComboBox pour changer la langue et ToggleButton pour le mode sombre/clair
 - **Bouton de déconnexion** : Permet de se déconnecter en toute sécurité
-
+<p align="center">
+  <img src="Images/main_dashboard3.png" alt="Interface Dashboard" width="700"/>
+</p>
+<p align="center">
+  <img src="Images/main_dashboard4.png" alt="Interface Dashboard Dark mode" width="700"/>
+</p>
 ### 6.4 `note_editor.fxml` - Éditeur de Notes
 **Titre** : Espace de Rédaction et d'Édition de Journal
 
@@ -952,6 +964,9 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **Analyse d'humeur en temps réel** : Affichage du score émotionnel calculé après sauvegarde
 - **Boutons d'action** : Sauvegarder, Annuler, Supprimer (avec confirmation)
 - **Horodatage** : Affichage automatique de la date de création et de dernière modification
+  <p align="center">
+  <img src="Images/Note editor5.png" alt="Interface Note Editor" width="700"/>
+</p>
 
 ### 6.5 `analytics.fxml` - Tableau de Bord Analytique
 **Titre** : Centre d'Insights et Statistiques Émotionnelles
@@ -962,6 +977,9 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **Graphique circulaire** : PieChart montrant la distribution des humeurs (Très Bon, Bon, Bas, Mauvais)
 - **Légende interactive** : Explication des codes couleur et des plages de scores
 - **Bouton retour** : Navigation facile vers le dashboard principal
+  <p align="center">
+  <img src="Images/analytics6.png" alt="Interface Analytics" width="700"/>
+</p>
 
 ### 6.6 `history_calendar.fxml` - Calendrier Historique
 **Titre** : Navigation Temporelle et Consultation des Entrées Passées
@@ -973,6 +991,13 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **Indicateurs visuels** : Chaque cellule de jour affiche un indicateur coloré si des notes existent pour cette date
 - **Interaction** : Clic sur un jour pour afficher toutes les notes de cette journée
 - **Bouton retour** : Retour au dashboard principal
+  <p align="center">
+  <img src="Images/history_calendar7-1.png" alt="Interface Calendar" width="700"/>
+</p>
+<p align="center">
+  <img src="Images/history_calendar7-2.png" alt="Interface Calendar(Day)" width="700"/>
+</p>
+
 
 ### 6.7 `profile_settings.fxml` - Paramètres du Profil
 **Titre** : Configuration et Personnalisation du Compte Utilisateur
@@ -982,6 +1007,9 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **Préférences d'affichage** : ComboBox pour sélectionner le thème (Clair/Sombre)
 - **Préférences linguistiques** : ComboBox pour choisir la langue de l'interface (FR/EN)
 - **Boutons d'action** : Sauvegarder les modifications
+  <p align="center">
+  <img src="Images/Profile8.png" alt="Interface Profile" width="700"/>
+</p>
 
 ### 6.8 `notifications.fxml` - Centre de Notifications
 **Titre** : Gestion des Alertes et Rappels Système
@@ -991,6 +1019,9 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 - **Indicateur de lecture** : Distinction visuelle entre notifications lues et non lues
 - **Actions** : Marquer comme lu
 - **Bouton retour** : Navigation vers le dashboard
+  <p align="center">
+  <img src="Images/Notifications9.png" alt="Interface Notifications" width="700"/>
+</p>
 
 ### 6.9 `day_details.fxml` - Détails d'une Journée
 **Titre** : Vue Détaillée des Entrées d'un Jour Spécifique
