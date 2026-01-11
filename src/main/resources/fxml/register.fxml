@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" 
+      xmlns="http://javafx.com/javafx/17" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.journalintime.ui.controller.RegisterController"
+      stylesheets="@../css/styles.css"
+      styleClass="root">
+
+    <VBox spacing="15" maxWidth="400" alignment="CENTER" styleClass="card">
+        <Label fx:id="appTitleLabel" text="Journal Intime" styleClass="title-label"/>
+        <Label fx:id="registerHeaderLabel" text="Create Account" style="-fx-font-size: 18px; -fx-text-fill: -color-primary-dark;"/>
+        
+        <TextField fx:id="usernameField" promptText="Username"/>
+        <TextField fx:id="emailField" promptText="Email"/>
+        <PasswordField fx:id="passwordField" promptText="Password"/>
+        
+        <Label fx:id="messageLabel" wrapText="true"/>
+        
+        <Button fx:id="registerBtn" text="Register" onAction="#handleRegister" maxWidth="Infinity" defaultButton="true" styleClass="button-accent"/>
+        <Button fx:id="backBtn" text="Back to Login" onAction="#handleBackToLogin" maxWidth="Infinity" styleClass="button-secondary"/>
+    </VBox>
+</VBox>

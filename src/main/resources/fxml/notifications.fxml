@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.journalintime.ui.controller.NotificationController"
+            stylesheets="@../css/styles.css"
+            styleClass="root">
+    <top>
+        <HBox spacing="20" styleClass="header-bar">
+            <Button text="← Back" onAction="#handleBack" styleClass="button-secondary"/>
+            <Label text="Notifications" styleClass="title-label" style="-fx-font-size: 20px;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Mark all as read" onAction="#handleMarkAllRead" styleClass="button-secondary"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="15" style="-fx-padding: 30;">
+            <ListView fx:id="notificationListView" VBox.vgrow="ALWAYS" styleClass="notification-list"/>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.journalintime.ui.controller.NoteEditorController"
+            stylesheets="@../css/styles.css"
+            styleClass="root">
+    <top>
+        <HBox spacing="15" styleClass="header-bar">
+            <Button fx:id="backBtn" text="Back" onAction="#handleBack" styleClass="button-secondary"/>
+            <TextField fx:id="titleField" promptText="Note Title" HBox.hgrow="ALWAYS" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <ToggleButton fx:id="favoriteToggle" text="⭐" styleClass="button-secondary"/>
+            <ToggleButton fx:id="importantToggle" text="🚩" styleClass="button-secondary"/>
+            <Button fx:id="deleteBtn" text="Delete" onAction="#handleDelete" styleClass="button-secondary" style="-fx-text-fill: red; -fx-border-color: red;"/>
+            <Button fx:id="exportBtn" text="Export PDF" onAction="#handleExport" styleClass="button-secondary"/>
+            <Button fx:id="saveBtn" text="Save" onAction="#handleSave" styleClass="button-accent"/>
+        </HBox>
+    </top>
+    <center>
+        <TextArea fx:id="contentArea" promptText="Write your thoughts..." wrapText="true" styleClass="text-area-editor">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+        </TextArea>
+    </center>
+    <right>
+        <VBox spacing="15" styleClass="sidebar" prefWidth="300">
+            <!-- Smart Inspiration Section -->
+            <VBox spacing="10" styleClass="card" style="-fx-border-color: -color-accent; -fx-border-width: 1px; -fx-padding: 10;">
+                <Label fx:id="promptTitleLabel" text="Inspiration" styleClass="card-title" style="-fx-text-fill: -color-accent;"/>
+                <Label fx:id="promptTextLabel" text="Loading prompt..." wrapText="true" style="-fx-font-style: italic; -fx-font-size: 13px;"/>
+                <HBox spacing="10">
+                    <Button text="New" onAction="#handleNewPrompt" styleClass="button-secondary" style="-fx-font-size: 10px;"/>
+                    <Button text="Morning" onAction="#handleMorningTemplate" styleClass="button-secondary" style="-fx-font-size: 10px;"/>
+                    <Button text="Evening" onAction="#handleEveningTemplate" styleClass="button-secondary" style="-fx-font-size: 10px;"/>
+                </HBox>
+            </VBox>
+
+            <Label fx:id="analysisTitleLabel" text="AI Mood Analysis" styleClass="sidebar-title" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: -color-primary-dark;"/>
+            <ScrollPane fitToWidth="true" styleClass="analysis-scroll-pane" VBox.vgrow="ALWAYS">
+                <content>
+                    <VBox fx:id="analysisContainer" spacing="15" style="-fx-padding: 10;">
+                        <!-- Dynamic content will be added here -->
+                    </VBox>
+                </content>
+            </ScrollPane>
+        </VBox>
+    </right>
+</BorderPane>

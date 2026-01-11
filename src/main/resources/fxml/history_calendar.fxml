@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.journalintime.ui.controller.HistoryCalendarController"
+            stylesheets="@../css/styles.css"
+            styleClass="root">
+    
+    <top>
+        <HBox spacing="15" styleClass="header-bar" alignment="CENTER_LEFT">
+             <Button fx:id="backBtn" text="Back" onAction="#handleBack" styleClass="button-secondary"/>
+             <Label fx:id="headerTitle" text="Calendar &amp; History" styleClass="header-title" style="-fx-font-size: 20px;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <!-- Calendar Navigation -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="&lt;" onAction="#handlePreviousMonth" styleClass="button-secondary"/>
+                <Label fx:id="monthLabel" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: -color-primary-dark;"/>
+                <Button text="&gt;" onAction="#handleNextMonth" styleClass="button-secondary"/>
+            </HBox>
+
+            <!-- Calendar Grid -->
+            <GridPane fx:id="calendarGrid" hgap="10" vgap="10" alignment="CENTER">
+                 <!-- Headers (Mon, Tue...) will be added dynamically or below -->
+                 <columnConstraints>
+                     <ColumnConstraints percentWidth="14.2"/>
+                     <ColumnConstraints percentWidth="14.2"/>
+                     <ColumnConstraints percentWidth="14.2"/>
+                     <ColumnConstraints percentWidth="14.2"/>
+                     <ColumnConstraints percentWidth="14.2"/>
+                     <ColumnConstraints percentWidth="14.2"/>
+                     <ColumnConstraints percentWidth="14.2"/>
+                 </columnConstraints>
+            </GridPane>
+        </VBox>
+    </center>
+
+</BorderPane>

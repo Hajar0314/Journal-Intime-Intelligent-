@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.journalintime.ui.controller.ProfileSettingsController"
+            stylesheets="@../css/styles.css"
+            styleClass="root">
+    <top>
+        <HBox spacing="20" styleClass="header-bar">
+            <Button fx:id="backBtn" text="← Back" onAction="#handleBack" styleClass="button-secondary"/>
+            <Label fx:id="headerLabel" text="Profile &amp; Settings" styleClass="title-label" style="-fx-font-size: 20px;"/>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+            <VBox spacing="30" alignment="TOP_CENTER" style="-fx-padding: 40;">
+                
+                <VBox spacing="15" alignment="CENTER" styleClass="card" maxWidth="600">
+                    <Label fx:id="userInfoLabel" text="User Information" styleClass="section-header"/>
+                    <HBox spacing="20" alignment="CENTER_LEFT">
+                        <StackPane>
+                           <Circle fx:id="avatarCircle" radius="40" fill="#E1BEE7" stroke="#BA68C8" strokeWidth="2"/>
+                           <Label text="👤" style="-fx-font-size: 30px;"/>
+                        </StackPane>
+                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                            <Label fx:id="usernameLabel" text="Username" styleClass="card-subtitle"/>
+                            <TextField fx:id="usernameField"/>
+                            <Label fx:id="emailLabel" text="Email" styleClass="card-subtitle"/>
+                            <TextField fx:id="emailField"/>
+                        </VBox>
+                    </HBox>
+                    <Button fx:id="updateProfileBtn" text="Update Profile" onAction="#handleUpdateProfile" styleClass="button" maxWidth="Infinity"/>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER">
+                    <Button fx:id="saveAllBtn" text="Save All Preferences" onAction="#handleSaveAll" styleClass="button-accent" prefWidth="250"/>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

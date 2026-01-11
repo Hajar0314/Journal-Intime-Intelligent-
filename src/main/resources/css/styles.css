@@ -1,0 +1,424 @@
+:root,
+.root {
+    -color-primary: #BA68C8;
+    -color-primary-dark: #8E24AA;
+    -color-accent: #F06292;
+    -color-accent-dark: #E91E63;
+    -color-bg: #F3E5F5;
+    -color-text: #4A148C;
+    -color-secondary: #CE93D8;
+    -color-white: #FFFFFF;
+
+    -fx-background-color: -color-bg;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+/* Dark Mode Overrides */
+.dark {
+    -color-bg: #1A1A1A;
+    -color-text: #E1BEE7;
+    -color-primary: #9C27B0;
+    -color-white: #2D2D2D;
+    -color-secondary: #4A148C;
+}
+
+.toggle-button:selected {
+    -fx-background-color: -color-accent;
+    -fx-text-fill: white;
+}
+
+.toggle-button.button-secondary:selected {
+    -fx-background-color: -color-accent;
+    -fx-border-color: -color-accent;
+    -fx-text-fill: white;
+}
+
+/* Font Classes */
+.font-standard {
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.font-modern {
+    -fx-font-family: 'Inter', sans-serif;
+}
+
+.font-classic {
+    -fx-font-family: 'Georgia', serif;
+}
+
+/* Base Label */
+.label {
+    -fx-text-fill: -color-text;
+    -fx-font-size: 14px;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-primary-dark;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+/* Inputs */
+.text-field,
+.password-field,
+.text-area {
+    -fx-background-color: -color-white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: derive(-color-primary, 20%);
+    -fx-border-width: 1px;
+    -fx-padding: 10;
+    -fx-text-fill: -color-text;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.05), 5, 0, 0, 2);
+}
+
+.text-field:focused,
+.password-field:focused,
+.text-area:focused {
+    -fx-border-color: -color-accent;
+    -fx-effect: dropshadow(three-pass-box, rgba(240, 98, 146, 0.3), 8, 0, 0, 0);
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(to right, -color-primary, -color-primary-dark);
+    -fx-text-fill: -color-white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 5, 0, 0, 3);
+    -fx-transition: all 0.3s;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, derive(-color-primary, 20%), derive(-color-primary-dark, 20%));
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 8, 0, 0, 4);
+}
+
+.button:pressed {
+    -fx-background-color: -color-primary-dark;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 2, 0, 0, 1);
+}
+
+/* Secondary Button (e.g. Back, Cancel) */
+.button-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-primary-dark;
+    -fx-border-color: -color-primary-dark;
+    -fx-border-radius: 20;
+    -fx-border-width: 1.5;
+}
+
+.button-secondary:hover {
+    -fx-background-color: rgba(186, 104, 200, 0.1);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* Accent Button (e.g. New Note, Action) */
+.button-accent {
+    -fx-background-color: linear-gradient(to right, -color-accent, -color-accent-dark);
+}
+
+.button-accent:hover {
+    -fx-background-color: linear-gradient(to right, derive(-color-accent, 20%), derive(-color-accent-dark, 20%));
+}
+
+/* Containers */
+.card {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    /* Glassmorphismish */
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+    -fx-padding: 30;
+}
+
+/* List View */
+.list-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-cell {
+    -fx-background-color: rgba(255, 255, 255, 0.6);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: transparent;
+    -fx-padding: 10;
+    -fx-margin: 5;
+    -fx-text-fill: -color-text;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.05), 3, 0, 0, 1);
+}
+
+.list-cell:filled:selected,
+.list-cell:filled:hover {
+    -fx-background-color: -color-white;
+    -fx-border-color: -color-accent;
+    -fx-text-fill: -color-primary-dark;
+    -fx-effect: dropshadow(three-pass-box, rgba(240, 98, 146, 0.2), 5, 0, 0, 2);
+}
+
+.list-cell:empty {
+    -fx-background-color: transparent;
+}
+
+/* Header Bar */
+.header-bar {
+    -fx-background-color: -color-white;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 0, 5, 10, 0);
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: rgba(255, 255, 255, 0.6);
+    -fx-padding: 20;
+    -fx-background-radius: 20 0 0 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.05), -5, 0, 10, 0);
+}
+
+/* Editor text area overrides */
+.text-area-editor {
+    -fx-font-size: 16px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-effect: null;
+}
+
+.text-area-editor .content {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 15;
+}
+
+.text-area-editor:focused {
+    -fx-effect: null;
+}
+
+
+/* --- Mood Analysis & Suggestions --- */
+.sidebar-title {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+.analysis-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.analysis-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.mood-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 8, 0, 0, 4);
+    -fx-padding: 15px;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 12px;
+}
+
+.card-title {
+    -fx-font-size: 12px;
+    -fx-text-fill: #757575;
+    -fx-font-weight: bold;
+    -fx-text-transform: uppercase;
+}
+
+.mood-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+    -fx-font-family: 'Segoe UI Black', sans-serif;
+}
+
+.section-header {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-primary-dark;
+    -fx-padding: 10 0 5 0;
+}
+
+.exercise-card {
+    -fx-background-color: linear-gradient(to bottom right, #ffffff, #FCE4EC);
+    /* Rose gradient */
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 5, 0, 0, 2);
+    -fx-padding: 15px;
+    -fx-border-color: -color-secondary;
+    -fx-border-width: 0 0 0 4px;
+    /* Left accent border */
+    -fx-cursor: hand;
+}
+
+.exercise-card:hover {
+    -fx-translate-y: -2px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 5);
+}
+
+.exercise-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+
+/* --- Calendar --- */
+.calendar-day {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.calendar-day:hover {
+    -fx-background-color: #FCE4EC;
+    /* Light rose */
+}
+
+.has-notes {
+    -fx-background-color: #F8F8F8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 3, 0, 0, 1);
+}
+
+.today {
+    -fx-border-color: -color-accent;
+    -fx-border-width: 2px;
+}
+
+/* --- Analytics & Modern Dashboard Enhancements --- */
+.card-accent {
+    -fx-background-color: linear-gradient(to right, #6366f1, #a855f7);
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);
+}
+
+.summary-text {
+    -fx-text-fill: rgba(255, 255, 255, 0.9);
+    -fx-font-size: 15px;
+    -fx-font-style: italic;
+}
+
+.stat-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.05), 5, 0, 0, 2);
+    -fx-padding: 15;
+}
+
+.dark .stat-card {
+    -fx-background-color: #1e293b;
+    -fx-border-color: #334155;
+}
+
+.stat-value {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4f46e5;
+}
+
+.dark .stat-value {
+    -fx-text-fill: #818cf8;
+}
+
+.stat-label {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+/* --- Notification List & Cards --- */
+.notification-list {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.notification-card {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 1;
+}
+
+.dark .notification-card {
+    -fx-background-color: #1e293b;
+    -fx-border-color: #334155;
+}
+
+.notification-card.unread {
+    -fx-border-color: #6366f1;
+    -fx-border-width: 2;
+    -fx-background-color: #f8fafc;
+}
+
+.dark .notification-card.unread {
+    -fx-background-color: #0f172a;
+    -fx-border-color: #818cf8;
+}
+
+.notification-message {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1e293b;
+}
+
+.dark .notification-message {
+    -fx-text-fill: #f8fafc;
+}
+
+.notification-date {
+    -fx-font-size: 11px;
+    -fx-text-fill: #94a3b8;
+}
+
+/* --- Pie Chart Styling --- */
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, 10%);
+    -fx-border-width: 0px;
+}
+
+.chart-pie-label {
+    -fx-fill: -color-text;
+    -fx-font-size: 11px;
+}
+
+.default-color0.chart-pie {
+    -fx-pie-color: #4ade80;
+}
+
+/* Very Good */
+.default-color1.chart-pie {
+    -fx-pie-color: #86efac;
+}
+
+/* Good */
+.default-color2.chart-pie {
+    -fx-pie-color: #fde047;
+}
+
+/* Neutral */
+.default-color3.chart-pie {
+    -fx-pie-color: #fb923c;
+}
+
+/* Bad */
+.default-color4.chart-pie {
+    -fx-pie-color: #f87171;
+}
+
+/* Very Bad */
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}

@@ -1,0 +1,43 @@
+# Fichiers et dossiers à ignorer
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.iml
+.idea/
+.vscode/
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Dossiers de build Maven
+target/
+dependency-reduced-pom.xml
+
+# Fichiers de configuration IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.orig
+
+# Logs
+*.log
+logs/
+
+# Base de données locale (si applicable)
+*.db
+*.sqlite

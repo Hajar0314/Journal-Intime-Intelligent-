@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.journalintime.ui.controller.DayDetailsController"
+            stylesheets="@../css/styles.css"
+            styleClass="root">
+    <top>
+        <HBox spacing="20" styleClass="header-bar" alignment="CENTER_LEFT">
+            <Button fx:id="backBtn" text="← Back" onAction="#handleBack" styleClass="button-secondary"/>
+            <Label fx:id="headerLabel" text="Day Details" styleClass="title-label" style="-fx-font-size: 20px;"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="20" style="-fx-padding: 30;">
+            <!-- Summary Card -->
+            <VBox styleClass="card" spacing="15">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+                <Label fx:id="dateLabel" text="January 09, 2026" styleClass="card-title" style="-fx-font-size: 22px;"/>
+                <Separator/>
+                <HBox spacing="30" alignment="CENTER">
+                    <VBox alignment="CENTER" spacing="5">
+                        <Label fx:id="dayScoreLabel" text="Day Score" styleClass="card-subtitle"/>
+                        <Label fx:id="scoreValueLabel" text="N/A" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: -color-accent;"/>
+                    </VBox>
+                    <Separator orientation="VERTICAL"/>
+                    <VBox alignment="CENTER" spacing="5">
+                        <Label fx:id="entriesCountLabel" text="Entries" styleClass="card-subtitle"/>
+                        <Label fx:id="countValueLabel" text="0" style="-fx-font-size: 36px; -fx-font-weight: bold;"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <!-- Notes List -->
+            <VBox spacing="10" VBox.vgrow="ALWAYS">
+                <Label fx:id="listTitleLabel" text="Journal Entries" styleClass="section-header"/>
+                <ListView fx:id="dayNotesListView" VBox.vgrow="ALWAYS" styleClass="notes-list-view"/>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

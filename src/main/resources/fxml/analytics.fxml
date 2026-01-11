@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.journalintime.ui.controller.AnalyticsController"
+            stylesheets="@../css/styles.css"
+            styleClass="root">
+    <top>
+        <HBox spacing="20" styleClass="header-bar">
+            <Button fx:id="backBtn" text="← Back" onAction="#handleBack" styleClass="button-secondary"/>
+            <Label fx:id="headerLabel" text="Personal Insights" styleClass="title-label" style="-fx-font-size: 20px;"/>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+            <VBox spacing="30" alignment="TOP_CENTER" style="-fx-padding: 30;">
+                
+                <!-- Hero Summary Card -->
+                <VBox styleClass="card-accent" spacing="15" maxWidth="800">
+                    <padding>
+                        <Insets top="25" right="25" bottom="25" left="25"/>
+                    </padding>
+                    <HBox alignment="CENTER_LEFT" spacing="15">
+                        <Label text="✨" style="-fx-font-size: 30px;"/>
+                        <VBox>
+                            <Label fx:id="summaryTitleLabel" text="Your Personal Summary" styleClass="card-title" style="-fx-text-fill: white;"/>
+                            <Label fx:id="summaryPhrase" text="Analyzing your journal entries to provide insights..." wrapText="true" styleClass="summary-text"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Stats Grid -->
+                <HBox spacing="20" alignment="CENTER">
+                    <VBox styleClass="stat-card" alignment="CENTER" prefWidth="180" prefHeight="120">
+                        <Label fx:id="todayCount" text="0" styleClass="stat-value"/>
+                        <Label fx:id="todayLabel" text="Entries Today" styleClass="stat-label"/>
+                    </VBox>
+                    <VBox styleClass="stat-card" alignment="CENTER" prefWidth="180" prefHeight="120">
+                        <Label fx:id="avgMoodScore" text="N/A" styleClass="stat-value"/>
+                        <Label fx:id="avgLabel" text="Avg Mood Score" styleClass="stat-label"/>
+                    </VBox>
+                    <VBox styleClass="stat-card" alignment="CENTER" prefWidth="180" prefHeight="120">
+                        <Label fx:id="totalNotes" text="0" styleClass="stat-value"/>
+                        <Label fx:id="totalLabel" text="Total Reflections" styleClass="stat-label"/>
+                    </VBox>
+                </HBox>
+
+                <HBox spacing="25" alignment="CENTER">
+                    <!-- Mood Distribution -->
+                    <VBox styleClass="card" spacing="15" prefWidth="450">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                        <Label fx:id="moodDistLabel" text="Mood Distribution" styleClass="card-title"/>
+                        <PieChart fx:id="moodPieChart" prefHeight="350"/>
+                    </VBox>
+                    
+                    <!-- Analysis Legend / Key -->
+                    <VBox styleClass="card" spacing="15" prefWidth="350">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                        <Label text="Analysis Legend" styleClass="card-title" fx:id="legendTitleLabel"/>
+                        <VBox spacing="10">
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <Label text="🟢" style="-fx-font-size: 16px;"/>
+                                <Label text="8-10: Very Good / Positive" style="-fx-font-weight: bold;" fx:id="legendVeryGood"/>
+                            </HBox>
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <Label text="🟡" style="-fx-font-size: 16px;"/>
+                                <Label text="5-7: Good / Neutral" style="-fx-font-weight: bold;" fx:id="legendGood"/>
+                            </HBox>
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <Label text="🟠" style="-fx-font-size: 16px;"/>
+                                <Label text="3-4: Low / Stressed" style="-fx-font-weight: bold;" fx:id="legendLow"/>
+                            </HBox>
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <Label text="🔴" style="-fx-font-size: 16px;"/>
+                                <Label text="0-2: Bad / Very Bad" style="-fx-font-weight: bold;" fx:id="legendBad"/>
+                            </HBox>
+                        </VBox>
+                        <Separator/>
+                        <Label fx:id="legendExplanation" text="The score is determined by analyzing the sentiment and keywords in your journal entries." wrapText="true" style="-fx-font-size: 12px; -fx-text-fill: -color-text;"/>
+                    </VBox>
+                </HBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

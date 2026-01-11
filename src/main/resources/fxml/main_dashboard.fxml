@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.journalintime.ui.controller.MainDashboardController"
+            stylesheets="@../css/styles.css"
+            styleClass="root">
+    <top>
+        <HBox spacing="20" styleClass="header-bar">
+            <Label fx:id="appTitleLabel" text="My Journal" styleClass="title-label" style="-fx-font-size: 20px;"/>
+            <TextField fx:id="searchField" promptText="Search by title..." prefWidth="300" style="-fx-font-size: 14px;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <!-- Buttons moved to left sidebar -->
+        </HBox>
+    </top>
+    <left>
+        <VBox spacing="15" alignment="TOP_CENTER" styleClass="sidebar">
+            <padding>
+                <Insets top="20" right="10" left="10"/>
+            </padding>
+            <Button text="+ New Note" onAction="#handleAddNote" maxWidth="Infinity" styleClass="button-accent" style="-fx-font-size: 14px;"/>
+            <Button text="View / Edit" onAction="#handleEditNote" maxWidth="Infinity" styleClass="button"/>
+            
+            <Separator/>
+
+            <Button fx:id="analyticsBtn" text="Analytics" onAction="#handleAnalytics" maxWidth="Infinity" styleClass="button-secondary" style="-fx-font-size: 14px;"/>
+            <Button fx:id="calendarBtn" text="Calendar" onAction="#handleCalendar" maxWidth="Infinity" styleClass="button-secondary" style="-fx-font-size: 14px;"/>
+            <Button fx:id="profileBtn" text="Profile" onAction="#handleProfile" maxWidth="Infinity" styleClass="button-secondary" style="-fx-font-size: 14px;"/>
+            <StackPane alignment="TOP_RIGHT">
+                <Button text="🔔" styleClass="button-secondary" onAction="#handleNotifications" maxWidth="Infinity"/>
+                <Label fx:id="notifBadge" text="0" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 0 5; -fx-font-size: 10px;" visible="false"/>
+            </StackPane>
+            
+            <Separator/>
+            
+            <VBox spacing="10" style="-fx-padding: 0 0 10 0;">
+                <Label fx:id="settingsLabel" text="Quick Settings" style="-fx-font-weight: bold; -fx-text-fill: gray; -fx-font-size: 11px;"/>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label fx:id="langLabel" text="Lang:" style="-fx-font-size: 11px;"/>
+                    <ComboBox fx:id="languageCombo" prefWidth="80" style="-fx-font-size: 11px;"/>
+                </HBox>
+                <ToggleButton fx:id="darkModeToggle" text="Dark Mode" maxWidth="Infinity" style="-fx-font-size: 11px;" onAction="#handleThemeToggle"/>
+            </VBox>
+
+            <Button fx:id="logoutBtn" text="Logout" onAction="#handleLogout" maxWidth="Infinity" styleClass="button-secondary"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 20;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label fx:id="sectionHeader" text="Your Notes" styleClass="section-header"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <CheckBox fx:id="favoriteFilter" text="Favorites only" onAction="#handleFilterChange"/>
+            </HBox>
+            <ListView fx:id="notesListView" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </center>
+</BorderPane>
