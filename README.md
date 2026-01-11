@@ -289,8 +289,9 @@ Le diagramme de classes représente la structure statique de l'application et le
 
 #### 3.2.5 Diagramme de Classes Complet
 
-<!-- Placeholder pour l'image du diagramme de classes -->
-![Diagramme de Classes UML](./docs/images/class_diagram.png)
+<p align="center">
+  <img src="Images/Class diagram.drawio.png" alt="Diagramme de classe UML" width="700"/>
+</p>
 *Figure 1 : Diagramme de classes complet montrant toutes les entités, leurs attributs, méthodes et relations*
 
 > **Note** : Le diagramme ci-dessus illustre l'architecture complète du système avec les cardinalités des relations (1:1, 1:N, N:N) et les dépendances entre les couches.
