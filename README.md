@@ -4,7 +4,7 @@
 ---
 
 
-  <img src="Images/Emsi-logo" alt="Logo Emsi" width="700"/>
+  <img src="Images/Emsi-logo" alt="Logo Emsi" width="300"/>
 
 
 **ÉCOLE MAROCAINE DES SCIENCES DE L'INGÉNIEUR (EMSI)**
