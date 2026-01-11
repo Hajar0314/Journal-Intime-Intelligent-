@@ -19,7 +19,7 @@
 **Journal Intime Intelligent**
 
 ### Réalisé par
-- **Étudiant(e) :** Hajar Belhachmi
+- **Étudiante :** Hajar Belhachmi
 - **Encadré par :** Abderrahim Larhlimi
 
 ### Date de Soumission
@@ -27,7 +27,7 @@ Janvier 2026
 
 ---
 
-## � REMERCIEMENTS
+##  REMERCIEMENTS
 
 Nous tenons à exprimer notre profonde gratitude à **Monsieur Abderrahim Larhlimi**, notre encadrant, pour son soutien constant, ses conseils précieux et son expertise qui ont été déterminants dans la réussite de ce projet. Ses orientations nous ont permis de surmonter les défis techniques et de développer une application robuste et professionnelle.
 
@@ -37,7 +37,7 @@ Enfin, nous exprimons notre reconnaissance à la communauté open-source pour le
 
 ---
 
-## �📑 TABLE DES MATIÈRES
+## 📑 TABLE DES MATIÈRES
 
 1. [Résumé Analytique](#-0-résumé-analytique-abstract)
 2. [Introduction Générale](#-1-introduction-générale)
@@ -75,7 +75,7 @@ Enfin, nous exprimons notre reconnaissance à la communauté open-source pour le
 
 ## 📜 0. RÉSUMÉ ANALYTIQUE (ABSTRACT)
 
-Ce rapport exhaustif détaille chaque aspect du cycle de vie du projet "Journal Intime". L'objectif principal est de concevoir un système de gestion de journal personnel qui transcende la simple saisie de texte pour devenir un véritable outil d'analyse introspective. Grâce à l'utilisation de **Java 17**, **Hibernate 6**, et **JavaFX**, nous avons bâti une plateforme robuste, sécurisée et intelligente. Ce document est structuré pour offrir une lecture technique profonde, couvrant l'analyse des besoins, la conception UML, l'architecture logicielle N-Tier, le dictionnaire de données exhaustif, ainsi qu'un guide complet de déploiement et de tests. La particularité de ce développement réside dans l'utilisation d'un environnement **Agentic AI** (Antigravity), garantissant une qualité de code supérieure et une adéquation parfaite avec les standards de l'ingénierie logicielle moderne.
+Ce rapport exhaustif détaille chaque aspect du cycle de vie du projet "Journal Intime". L'objectif principal est de concevoir un système de gestion de journal personnel qui transcende la simple saisie de texte pour devenir un véritable outil d'analyse introspective. Grâce à l'utilisation de **Java 17**, **Hibernate 6**, et **JavaFX**, nous avons bâti une plateforme robuste, sécurisée et intelligente. Ce document est structuré pour offrir une lecture technique profonde, couvrant l'analyse des besoins, la conception UML, l'architecture logicielle N-Tier, le dictionnaire de données exhaustif, ainsi qu'un guide complet de déploiement et de tests.
 
 ---
 
@@ -127,7 +127,7 @@ Le système doit répondre aux attentes prioritaires suivantes :
 
 ## 🛠️ 3. CONCEPTION UML ET ARCHITECTURE
 
-### 3.1 Diagramme de Cas d'Utilisation Détaillé
+### 3.1 Diagramme de Cas d'Utilisation
 
 Le diagramme de cas d'utilisation représente les interactions entre les acteurs du système et les fonctionnalités offertes par l'application. Il permet de visualiser de manière claire les besoins fonctionnels du point de vue utilisateur.
 
@@ -178,8 +178,7 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
 - **Scénario nominal** :
   1. L'utilisateur accède à la section Analytics
   2. Le système calcule les statistiques (moyenne d'humeur, distribution)
-  3. Le système génère les graphiques (PieChart, LineChart)
-  4. Le système affiche le résumé personnalisé
+  3. Le système génère les graphiques 
 
 **CU-04 : Modifier une Note Existante**
 - **Acteur** : Utilisateur Authentifié
@@ -195,9 +194,7 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
 - **Acteur** : Utilisateur Authentifié
 - **Scénario nominal** :
   1. L'utilisateur sélectionne "Supprimer"
-  2. Le système affiche une boîte de confirmation
-  3. L'utilisateur confirme
-  4. Le système supprime la note et ses analyses associées (cascade)
+  2. Le système supprime la note et ses analyses associées (cascade)
 
 **CU-06 : Analyser l'Humeur (Include)**
 - **Acteur** : Système d'Analyse IA
