@@ -1,4 +1,4 @@
-# 📔 RAPPORT DE PROJET FINAL
+#  RAPPORT DE PROJET FINAL
 # JOURNAL INTIME INTELLIGENT AVEC ANALYSE IA
 
 ---
@@ -81,7 +81,7 @@ Ce rapport exhaustif détaille chaque aspect du cycle de vie du projet "Journal 
 
 ---
 
-## 📖 1. INTRODUCTION GÉNÉRALE
+##  1. INTRODUCTION GÉNÉRALE
 
 ### 1.1 Contexte du Projet
 La transition numérique a touché tous les aspects de notre quotidien, y compris les plus intimes comme la tenue d'un journal. Dans un monde où le stress et l'anxiété sont prédominants, le "Journaling" (écriture réflexive) s'impose comme une thérapie douce. Ce projet vise à fournir un support numérique qui non seulement stocke ces réflexions mais aide aussi l'utilisateur à comprendre ses émotions sur le long terme.
@@ -97,7 +97,7 @@ L'absence de Feedback dans les outils numériques classiques freine l'engagement
 
 ---
 
-## 📊 2. ANALYSE ET SPÉCIFICATIONS DES BESOINS
+##  2. ANALYSE ET SPÉCIFICATIONS DES BESOINS
 
 ### 2.1 Besoins Fonctionnels (User Stories)
 Le système doit répondre aux attentes prioritaires suivantes :
@@ -127,7 +127,7 @@ Le système doit répondre aux attentes prioritaires suivantes :
 
 ---
 
-## 🛠️ 3. CONCEPTION UML ET ARCHITECTURE
+##  3. CONCEPTION UML ET ARCHITECTURE
 
 ### 3.1 Diagramme de Cas d'Utilisation
 
@@ -479,7 +479,7 @@ journal-intime/
 
 ---
 
-## 🏗️ 4. DICTIONNAIRE DE DONNÉES COMPLET (VUE PHYSIQUE)
+##  4. DICTIONNAIRE DE DONNÉES COMPLET (VUE PHYSIQUE)
 
 ### 4.0 Modèle Logique de Données (MLD)
 
@@ -576,7 +576,7 @@ users (1) ----< (N) notifications
 
 ---
 
-## 💻 5. EXTRAITS DE CODE ET ANALYSE DÉTAILLÉE
+##  5. EXTRAITS DE CODE ET ANALYSE DÉTAILLÉE
 
 ### 5.0 Design Patterns (Patrons de Conception)
 
@@ -903,7 +903,7 @@ public NoteDTO getNoteById(Long id) {
 
 ---
 
-## 🖌️ 6. ANALYSE DÉTAILLÉE DES INTERFACES UTILISATEUR (IHM)
+##  6. ANALYSE DÉTAILLÉE DES INTERFACES UTILISATEUR (IHM)
 
 L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une fonctionnalité spécifique. Voici une description exhaustive de chaque interface :
 
@@ -1084,7 +1084,7 @@ L'application comprend 14 interfaces FXML distinctes, chacune conçue pour une f
 
 ---
 
-## 🚀 8. GUIDE D'INSTALLATION, CONFIGURATION ET DÉPANNAGE
+##  8. GUIDE D'INSTALLATION, CONFIGURATION ET DÉPANNAGE
 
 ### 8.1 Prérequis Système
 - **CPU** : Dual-core minimum.
@@ -1285,7 +1285,7 @@ mvn versions:display-dependency-updates
 
 ---
 
-## 📈 9. QUALITÉ LOGICIELLE ET TESTS DE VALIDATION
+##  9. QUALITÉ LOGICIELLE ET TESTS DE VALIDATION
 
 ### 9.1 Approche de Test (Unit Testing)
 Nous avons adopté une approche de développement dirigée par les tests (TDD simplifié) pour les composants critiques.
@@ -1302,7 +1302,7 @@ Nous avons adopté une approche de développement dirigée par les tests (TDD si
 
 ---
 
-## 🌟 10. PERSPECTIVES ET ÉVOLUTION FUTURES
+##  10. PERSPECTIVES ET ÉVOLUTION FUTURES
 
 ### 10.1 Évolutions Technologiques
 - **IA de 2ème Génération** : Intégration de modèles Transformer (ex: BERT local) pour une analyse sémantique beaucoup plus fine que le simple pattern matching.
@@ -1314,7 +1314,7 @@ Nous avons adopté une approche de développement dirigée par les tests (TDD si
 
 ---
 
-## 📚 11. BIBLIOGRAPHIE ET WEBOGRAPHIE DÉTAILLÉE
+##  11. BIBLIOGRAPHIE ET WEBOGRAPHIE DÉTAILLÉE
 
 ### 11.1 Ressources Académiques
  - **Bloch, J.** (2018). *Effective Java*. Addison-Wesley (Indispensable pour la POO).
@@ -1330,7 +1330,7 @@ Nous avons adopté une approche de développement dirigée par les tests (TDD si
 
 ---
 
-## 📝 12. CONCLUSION ET BILAN PERSONNEL
+##  12. CONCLUSION ET BILAN PERSONNEL
 
 ### 12.1 Bilan du Projet
 Ce projet "Journal Intime" a été une opportunité exceptionnelle de mettre en pratique les concepts théoriques du module Java Avancé. La maîtrise de l'écosystème **Jakarta EE / JPA** combinée à la flexibilité de **JavaFX** nous a permis de réaliser un produit fini d'une grande qualité technique. 
