@@ -1064,8 +1064,8 @@ Cette section détaille toutes les étapes nécessaires pour exécuter le projet
 
 #### Étape 1 : Clonage du Dépôt Git
 ```bash
-git clone 
-cd 
+git clone https://github.com/Hajar0314/Journal-Intime-Intelligent-.git
+cd Journal-Intime-Intelligent-
 ```
 **Explication** : Récupère le code source depuis le dépôt distant et navigue dans le répertoire du projet.
 
