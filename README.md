@@ -27,6 +27,8 @@
 ### Date de Soumission
 Janvier 2026
 
+<img src="Images/WhatsApp Image 2026-01-13 at 09.07.30.jpeg" alt="Ma photo personnelle" width="300"/>
+
 ---
 
 ##  REMERCIEMENTS
